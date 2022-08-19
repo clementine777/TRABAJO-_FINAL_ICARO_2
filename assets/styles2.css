@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/* .grid-container > * {
+  border: 2px solid white;
+} */
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+
+.grid-container {
+  background-color: black;
+  display: grid;
+  /* gap: 10px; */
+  grid-template:
+    "header " 170px
+    "navbar " 40px
+    "banner  " auto
+    "products" 100vh
+    "footer " auto;
+}
+.header {
+  grid-area: header;
+}
+.navbar {
+  grid-area: navbar;
+}
+.banner {
+  grid-area: banner;
+}
+.products {
+  grid-area: products;
+}
+.footer {
+  grid-area: footer;
+  align-self: flex-end;
+
+  /* ESTO MANYIENE EL FOOTER PEGADO USANDO GRID LAYOUT */
+}
