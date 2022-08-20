@@ -13,6 +13,26 @@ html {
 }
 body {
   height: 100%;
+  position: relative;
+}
+
+.header {
+  grid-area: header;
+}
+.navbar {
+  grid-area: navbar;
+}
+.banner {
+  grid-area: banner;
+}
+main {
+  grid-area: products;
+}
+.footer {
+  grid-area: footer;
+  /* align-self: flex-end; */
+  position: sticky;
+  /* ESTO MANYIENE EL FOOTER PEGADO USANDO GRID LAYOUT */
 }
 
 .grid-container {
@@ -23,24 +43,6 @@ body {
     "header " 170px
     "navbar " 40px
     "banner  " auto
-    "products" 100vh
+    "products" auto
     "footer " auto;
-}
-.header {
-  grid-area: header;
-}
-.navbar {
-  grid-area: navbar;
-}
-.banner {
-  grid-area: banner;
-}
-.products {
-  grid-area: products;
-}
-.footer {
-  grid-area: footer;
-  align-self: flex-end;
-
-  /* ESTO MANYIENE EL FOOTER PEGADO USANDO GRID LAYOUT */
 }
