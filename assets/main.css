@@ -21,18 +21,23 @@
 article {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   /* flex-wrap: wrap; */
   align-items: center;
   background-color: #150050;
-  padding: 5px 7px;
-  max-height: 280px;
-  min-height: 400px;
+  /* padding: 0 7px; */
+  max-height: 250px;
+  min-height: 360px;
   max-width: 250px;
   min-width: auto;
   border-radius: 4%;
   text-align: center;
 }
+
+/* .products-container .products article :hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+} */
 
 h2 {
   font-size: 15px;
@@ -41,8 +46,12 @@ h2 {
 article img {
   max-width: 100%;
   height: auto;
-  border-radius: 5%;
+  border-top-left-radius: 4%;
+  border-top-right-radius: 4%;
+
+  /* padding-bottom: 1px; */
 }
+
 .price {
   position: relative;
 }
@@ -66,7 +75,13 @@ button {
   height: auto;
   width: 150px;
   padding: 5px;
+  margin-bottom: 15px;
   border-radius: 10%;
   background-color: #610094;
   cursor: pointer;
 }
+
+/* .products article hr {
+  width: 100%;
+  color: rgb(184, 180, 180);
+} */

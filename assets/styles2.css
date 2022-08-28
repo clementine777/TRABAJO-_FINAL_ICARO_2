@@ -25,13 +25,13 @@ body {
 .banner {
   grid-area: banner;
 }
-main {
+.products-container {
   grid-area: products;
 }
 .footer {
   grid-area: footer;
-  /* align-self: flex-end; */
-  position: sticky;
+  align-self: flex-end;
+  /* position: sticky; */
   /* ESTO MANYIENE EL FOOTER PEGADO USANDO GRID LAYOUT */
 }
 
