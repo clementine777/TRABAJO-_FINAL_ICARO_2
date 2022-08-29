@@ -79,8 +79,8 @@
   background-color: #610094;
 }
 
-@media (max-widht: 400px) {
+/* @media (max-width: 450px) {
   .contenedor-header {
-    background-color: white;
+    display:none ;
   }
-}
+} */

@@ -13,7 +13,7 @@ html {
 }
 body {
   height: 100%;
-  position: relative;
+  /* position: relative; */
 }
 
 .header {
@@ -30,7 +30,7 @@ body {
 }
 .footer {
   grid-area: footer;
-  align-self: flex-end;
+  align-self: end;
   /* position: sticky; */
   /* ESTO MANYIENE EL FOOTER PEGADO USANDO GRID LAYOUT */
 }
@@ -38,6 +38,7 @@ body {
 .grid-container {
   background-color: black;
   display: grid;
+  /* align-content: end; */
   /* gap: 10px; */
   grid-template:
     "header " 170px
@@ -45,4 +46,18 @@ body {
     "banner  " auto
     "products" auto
     "footer " auto;
+}
+
+@media screen and (width: 450px) {
+  .grid-container {
+    background-color: black;
+    display: grid;
+    /* gap: 10px; */
+    grid-template:
+      "header " 170px
+      ". "
+      "banner  " auto
+      "products" auto
+      "footer " auto;
+  }
 }
