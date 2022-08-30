@@ -79,8 +79,17 @@
   background-color: #610094;
 }
 
-/* @media (max-width: 450px) {
-  .contenedor-header {
-    display:none ;
+@media screen and (max-width: 450px) {
+  .img-container::before {
+    content: url(../img/logo-responsive.png);
   }
-} */
+
+  .logo {
+    visibility: hidden;
+    width: 100%;
+    padding: 0 70px 0 10px;
+    height: auto;
+    cursor: pointer;
+    align-self: center;
+  }
+}

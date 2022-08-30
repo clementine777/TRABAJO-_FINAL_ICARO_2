@@ -38,6 +38,9 @@ body {
 .grid-container {
   background-color: black;
   display: grid;
+  /* position: relative; */
+  /* justify-items: ;
+  justify-content: flex-start; */
   /* align-content: end; */
   /* gap: 10px; */
   grid-template:
@@ -48,16 +51,20 @@ body {
     "footer " auto;
 }
 
-@media screen and (width: 450px) {
+@media screen and (max-width: 450px) {
   .grid-container {
     background-color: black;
     display: grid;
-    /* gap: 10px; */
+    
     grid-template:
-      "header " 170px
-      ". "
+      "header" 170px
+      "navbar " 0
       "banner  " auto
       "products" auto
       "footer " auto;
-  }
+  } 
+}
+/* }
+@media all and (max-width: 600px) {
+  #test1 { display:none; }
 }

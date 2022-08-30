@@ -17,6 +17,8 @@
   /* justify-content: space-evenly; */
   font-family: Arial, Helvetica, sans-serif;
   /* min-height: 100vh; */
+  align-items: center;
+  justify-items: center;
 }
 article {
   display: flex;
@@ -32,6 +34,9 @@ article {
   min-width: auto;
   border-radius: 4%;
   text-align: center;
+}
+.products article {
+  align-content: center;
 }
 
 /* .products-container .products article :hover {
