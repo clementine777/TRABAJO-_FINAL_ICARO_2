@@ -82,7 +82,7 @@
   background-color: #610094;
 }
 
-/* MOVILE MODE */
+/* MOVILE*/
 @media screen and (max-width: 450px) {
   .contenedor-header {
     justify-content: space-around;
@@ -92,7 +92,7 @@
   .img-container {
     content: url(../img/logo-responsive.png);
     height: 140px;
-    padding: 0 35px 0 0;
+    padding: 0 32px 0 0;
   }
 
   .logo {

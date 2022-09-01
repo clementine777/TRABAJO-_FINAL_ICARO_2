@@ -1,7 +1,7 @@
 .products-container {
   display: flex;
   justify-content: center;
-  height: 100%;
+  height: auto;
   width: auto;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -11,7 +11,7 @@
   margin: 3% 20%;
   gap: 60px;
   grid-template:
-    "article descriptions" auto
+    "article descriptions"
     "relationated relationated" 500px/
     500px 320px;
 }
@@ -19,8 +19,6 @@
 /*PARTES DEL LAYOUT*/
 .pic {
   grid-area: article;
-  /* min-height: 800px;
-  max-height: 500px; */
   height: 800px;
   width: auto;
   display: flex;
@@ -57,8 +55,9 @@
 .description {
   grid-area: descriptions;
   display: flex;
-  min-height: 800px;
-  max-height: 500px;
+  height: 800;
+  /* min-height: 800px; */
+  /* max-height: 500px; */
   width: auto;
   flex-direction: column;
   justify-content: space-between;
@@ -127,13 +126,14 @@
 @media screen and (max-width: 450px) {
   .products-container-details {
     grid-template:
-      "article "
+      "article " 900px
       "descriptions" auto
-      "relationated " 500px /
+      "relationated " 400px /
       auto;
   }
+
   pic {
-    height: 1000px;
+    max-height: 900px;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -142,19 +142,19 @@
   }
 
   .pic img {
-    width: 740px;
-    height: auto;
+    width: auto;
+    height: 720px;
     padding-top: 20px;
     border-radius: 4%;
   }
 
-  .pic .icons-container {
+  .pic > .icons-container {
     display: flex;
     flex-direction: column;
-    height: 500px;
-
-    margin: 15px;
+    height: 600px;
+    margin: 20px;
     justify-content: space-around;
+    font-size: 30px;
   }
 
   /*SIDEBAR DESCRIPTION*/
@@ -170,18 +170,29 @@
 
   .description {
     grid-area: descriptions;
-    display: flex;
-    min-height: 800px;
-    max-height: 500px;
+    height: 700px;
     width: auto;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: start;
+    text-align: center;
     padding: 12px;
-    font-size: 16px;
-    line-height: 33px;
-    border-radius: 10px;
-    border: 2px solid grey;
+    font-size: 19px;
+    line-height: 36px;
+  }
+
+  /*precio movile*/
+
+  .price-detail .dollar {
+    left: -25px;
+    bottom: 31px;
+    font-size: 40px;
+  }
+
+  .price-detail .number {
+    font-size: 75px;
+  }
+
+  .price-detail .fractions {
+    left: 88px;
+    bottom: 32px;
+    font-size: 40px;
   }
 }
