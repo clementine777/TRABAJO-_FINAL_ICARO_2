@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/937d1d0622.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/assets/styles2.css">
-    <link rel="stylesheet" href="/assets/header2.css">
-    <link rel="stylesheet" href="/assets/navbar2.css">
-    <link rel="stylesheet" href="/assets/footer2.css">
-    <link rel="stylesheet" href="assets/detail-products-css/details.css">
+    <link rel="stylesheet" href="/assets/styles2.css" />
+    <link rel="stylesheet" href="/assets/header2.css" />
+    <link rel="stylesheet" href="/assets/navbar2.css" />
+    <link rel="stylesheet" href="/assets/footer2.css" />
+    <link rel="stylesheet" href="./assets/detail-products-css/details.css">
     <title>STAR JEWELRY FACTORY</title>
 </head>
 
@@ -21,24 +21,35 @@
             WELCOME TO THE STAR FACTORY &nbsp;<strong>FREE SHIPPING WORLDWIDE</strong>
         </div>
         <div class="contenedor-header">
+            <!--carro mod-movil-->
+            <div class="cart-responsive">
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
             <!-- BARRA DE BUSQUEDA -->
             <div class="seacrh-container">
                 <div class="search">
-                    <input type="text" placeholder="Search" required>
-                    <button><i class="fa-solid fa-magnifying-glass"></i> </button>
+                    <input type="text" placeholder="Search" required />
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
             <div class="logo-header">
-                <img src="img/cooltext415529546518944.png" alt="logo de la joyeria" class="logo" />
+                <div class="img-container">
+                    <img src="img/cooltext415529546518944.png" alt="logo de la joyeria" class="logo" />
+                </div>
             </div>
             <div class="session">
                 <a href="#"><i class="fa-solid fa-bag-shopping"></i>&nbsp;</a>
                 <a href="#"><i class="fa-solid fa-user"></i>&nbsp;</a>
             </div>
+            <!-- burguer menu mod-movil -->
+            <div class="burguer-menu">
+                <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </div>
+        </div>
     </header>
     <!-- BAARA DE NAVEGACION -->
     <nav class="navbar">
-        <div class="navbar">
+        <div class="navbar2">
             <nav>
                 <ul class="nav-elements">
                     <li><a href="#" class="link"></a> RINGS</li>
@@ -51,24 +62,33 @@
             </nav>
         </div>
     </nav>
-    <!-- BANNER VACIO SI LO SACAS SE ROMPE UNKNOW -->
-    <div class="banner"></div>
+    <!--BANNER-->
+    <div class="banner">
+    </div>
     <!--DETALLES-->
     <main class="products-container">
         <div class="products-container-details">
             <div class="pic">
                 <img src="img/items2/anillo alas.jpg" alt="ring">
-                <span> <i class="fa-solid fa-truck-fast"></i> &nbsp &nbsp Free Shipping Wolrdwide </span>
-                <span> <i class="fa-solid fa-box"></i>&nbsp &nbsp Free 30 Days Return </span>
-                <span> <i class="fa-solid fa-shield-heart"></i>&nbsp &nbsp Life Time Waranty </span>
+                <div class="icons-container">
+                    <span> <i class="fa-solid fa-truck-fast"></i>&nbsp; &nbsp; Free Shipping Wolrdwide </span>
+                    <span> <i class="fa-solid fa-box"></i>&nbsp; &nbsp; Free 30 Days Return </span>
+                    <span> <i class="fa-solid fa-shield-heart"></i> &nbsp;&nbsp; Life Time Waranty </span>
+                </div>
             </div>
 
             <div class="description">
+                <h1> ANGEL WINGS RING </h1>
+                <hr>
                 <h2> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, sapiente a adipisci dolor
                     ipsa fuga! Explicabo ea fuga dolorum libero id hic esse, amet asperiores dolor vitae consequatur
                     fugiat cupiditate!
                 </h2>
-
+                <div class="price-detail">
+                    <span class="dollar">$</span>
+                    <span class="number">29</span>
+                    <span class="fractions">99</span>
+                </div>
                 <a href="#"><button>BUY</button></a>
                 <a href="#"><button>ADD TO CART</button> </a>
 
@@ -86,6 +106,8 @@
         </div>
         </div>
     </main>
+
+
     <!-- FOOTER -->
     <footer class="footer-container">
         <div class="contactus">
@@ -115,12 +137,8 @@
             <a href="#">History</a>
         </div>
         <div class="end-foot">
-            <span>Terms and Condition
-                Copiright 2022
-            </span>
-            <span>
-                Privacy Policy
-            </span>
+            <span>Terms and Condition Copiright 2022 </span>
+            <span> Privacy Policy </span>
         </div>
     </footer>
 </body>

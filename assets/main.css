@@ -1,25 +1,24 @@
 .products-container {
   display: flex;
   justify-content: center;
-  height: 1500px;
+  height: 1600px;
   width: auto;
-  /* flex-wrap: wrap; */
-  /* margin-bottom: 50px; */
 }
 
 .products {
   /* margin: 50px auto 0; */
-  margin: 50px auto 10px;
+  margin: 30px 20px 0;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: 360px 360px 360px;
   gap: 5%;
   /* justify-content: space-evenly; */
   font-family: Arial, Helvetica, sans-serif;
   /* min-height: 100vh; */
-  align-items: center;
-  justify-items: center;
+  align-items: stretch;
+  /* justify-items: ; */
 }
+/*ARTICULOS EN VENTA*/
 article {
   display: flex;
   flex-direction: column;
@@ -28,21 +27,13 @@ article {
   align-items: center;
   background-color: #150050;
   /* padding: 0 7px; */
-  max-height: 250px;
-  min-height: 360px;
-  max-width: 250px;
+  max-height: 430px;
+  min-height: auto;
+  max-width: 300px;
   min-width: auto;
   border-radius: 4%;
   text-align: center;
 }
-.products article {
-  align-content: center;
-}
-
-/* .products-container .products article :hover {
-  transform: scale(1.05);
-  transition: 0.3s;
-} */
 
 h2 {
   font-size: 15px;
@@ -53,10 +44,9 @@ article img {
   height: auto;
   border-top-left-radius: 4%;
   border-top-right-radius: 4%;
-
-  /* padding-bottom: 1px; */
 }
 
+/* NUMEROS DEL PRECIO */
 .price {
   position: relative;
 }
@@ -70,6 +60,7 @@ article img {
 .price .number {
   font-size: 35px;
 }
+
 .fractions {
   position: absolute;
   left: 40px;
@@ -86,7 +77,44 @@ button {
   cursor: pointer;
 }
 
-/* .products article hr {
-  width: 100%;
-  color: rgb(184, 180, 180);
-} */
+@media screen and (max-width: 450px) {
+  .products {
+    margin: 40px 10px 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+  }
+
+  article {
+    max-height: 470px;
+    min-height: auto;
+    max-width: 350px;
+    min-width: auto;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  .price .number {
+    font-size: 45px;
+  }
+
+  .fractions {
+    left: 50px;
+    bottom: 25px;
+  }
+
+  .price .dollar {
+    left: -15px;
+    bottom: 25px;
+  }
+
+  .products-container {
+    display: flex;
+    justify-content: center;
+    height: 2100px;
+    width: auto;
+  }
+}
