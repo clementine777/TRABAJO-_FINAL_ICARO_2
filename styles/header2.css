@@ -90,7 +90,7 @@
   }
 
   .img-container {
-    content: url(../img/logo-responsive.png);
+    content: url(../assets/img/logo-responsive.png);
     height: 140px;
     padding: 0 32px 0 0;
   }

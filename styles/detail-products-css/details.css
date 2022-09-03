@@ -8,7 +8,8 @@
 /*INIICO DE PEQUEÑO LAYOUT*/
 .products-container-details {
   display: grid;
-  margin: 3% 20%;
+  /* margin: 3% 20%; */
+  margin: 25px 25px;
   gap: 60px;
   grid-template:
     "article descriptions"
