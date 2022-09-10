@@ -1,4 +1,4 @@
-.products-container {
+.main-container {
   display: flex;
   justify-content: center;
   height: 1600px;
@@ -111,7 +111,7 @@ button {
     bottom: 25px;
   }
 
-  .products-container {
+  .main-container {
     display: flex;
     justify-content: center;
     height: 2100px;

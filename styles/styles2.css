@@ -10,11 +10,12 @@
 } */
 html {
   height: 100%;
+
 }
-body {
-  height: 100%;
-  /* position: relative; */
+body{
+    min-height:100vh ;
 }
+
 
 .header {
   grid-area: header;
@@ -25,8 +26,10 @@ body {
 .banner {
   grid-area: banner;
 }
-.products-container {
+.main-container {
   grid-area: products;
+  min-height:1fr ;
+  
 }
 .footer {
   grid-area: footer;
@@ -38,6 +41,7 @@ body {
 .grid-container {
   background-color: black;
   display: grid;
+  min-height:100vh ;
   /* position: relative; */
   /* justify-items: ;
   justify-content: flex-start; */
@@ -47,7 +51,7 @@ body {
     "header " 170px
     "navbar " 40px
     "banner  " auto
-    "products" auto
+    "products" 1fr
     "footer " auto;
 }
 
@@ -60,7 +64,7 @@ body {
       "header" 170px
       "navbar " 0
       "banner  " auto
-      "products" auto
+      "products" 1fr
       "footer " auto;
   } 
 }
