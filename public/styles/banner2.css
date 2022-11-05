@@ -31,7 +31,7 @@
   font-weight: bold;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 800px) {
   .banner img {
     height: auto;
     max-width: 98%;

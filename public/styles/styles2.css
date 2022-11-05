@@ -55,7 +55,7 @@ body{
     "footer " auto;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .grid-container {
     background-color: black;
     display: grid;

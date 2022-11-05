@@ -6,7 +6,7 @@ app.set("view engine", "ejs"); // registra ejs
 const port = process.env.PORT || 3000; //llama a la variable de entorno del PORT
 
 //registra carpeta publica
-app.use(express.static(path.join(__dirname, "../public")));
+app.use("/", express.static(path.join(__dirname, "../public")));
 
 //app.get("/", (req, res) => res.send(path.join.(__dirname ));
 

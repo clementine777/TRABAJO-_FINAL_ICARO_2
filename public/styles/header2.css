@@ -83,7 +83,7 @@
 }
 
 /* MOVILE*/
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 800px) {
   .contenedor-header {
     justify-content: space-around;
     align-items: center;
@@ -119,7 +119,7 @@
 }
 
 /* DESKTOP MODE */
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 800px) {
   .contenedor-header .cart-responsive {
     display: none;
   }
