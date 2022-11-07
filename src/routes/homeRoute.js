@@ -1,9 +1,12 @@
-// const express = require("express");
-// const router = express.Router();
-// const path = require("path");
+const express = require("express");
+const router = express.Router();
+const homeController = require("../controllers/homeController");
 
-// router.get("/home", (req, res) => {
-//   res.sendfile(path.join(__dirname, "../public/index.html"));
-// });
-// console.log(router);
-// module.exports = "homeRoute";
+router.get("/home", homeController.mesage);
+// router.post();
+// router.delete();
+// router.put();
+
+// console.log(homeRoute);
+
+module.exports = router;
