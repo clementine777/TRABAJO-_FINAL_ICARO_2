@@ -1,6 +1,10 @@
 const signIn = {
-  mesage: (req, res) => {
-    res.send("ruta de registroooop");
+  signInView: (req, res) => {
+    res.render("signIn", { tittleform: "Complete the form and join Us!" });
+  },
+
+  signInPost: (req, res) => {
+    console.log(req.body);
   },
 };
 
