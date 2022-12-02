@@ -10,7 +10,7 @@
   margin: 30px 20px 0;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: 360px 360px 360px;
+  grid-template-rows: 370px 370px 370px;
   gap: 5%;
   /* justify-content: space-evenly; */
   font-family: Arial, Helvetica, sans-serif;
@@ -27,8 +27,8 @@ article {
   align-items: center;
   background-color: #150050;
   /* padding: 0 7px; */
-  max-height: 430px;
-  min-height: auto;
+  /* max-height: 500px; */
+  /* min-height: auto; */
   max-width: 300px;
   min-width: auto;
   border-radius: 4%;
@@ -53,7 +53,7 @@ article img {
 
 .price .dollar {
   position: absolute;
-  left: -10px;
+  left: -13px;
   bottom: 17px;
 }
 

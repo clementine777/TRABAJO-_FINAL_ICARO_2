@@ -1,7 +1,7 @@
 const express = require("express");
+const signInView = require("../controllers/signInController");
 const router = express.Router();
-const signIn = require("../controllers/signInController");
 
-router.get("/signIn", signIn.signInView);
+router.get("/signIn", signInView);
 
 module.exports = router;

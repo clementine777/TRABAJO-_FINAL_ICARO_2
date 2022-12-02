@@ -1,1 +1,16 @@
-<%- include ('partials/heads', {headtittle: 'SIGN IN' }); %>
+<%- include ('partials/heads', {headtittle: 'SUCCES LOGIN' , tittleCss:'main.css' }); %>
+
+  <body>
+    <h1> review your information and send it </h1>
+    <ul>
+      <li>
+        Name <%= userData.firstname %>
+          <br>
+          Apellidoo <%= userData.lastname %>,
+            <br>
+            Email <%= userData.email %>
+      </li>
+    </ul>
+  </body>
+
+  </html>

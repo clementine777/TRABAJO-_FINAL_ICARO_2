@@ -1,7 +1,4 @@
-const signIn = {
-  signInView: (req, res) => {
-    res.send("ruta signin ok");
-  },
+const signInView = (req, res) => {
+  res.render("signIn.ejs");
 };
-
-module.exports = signIn;
+module.exports = signInView;

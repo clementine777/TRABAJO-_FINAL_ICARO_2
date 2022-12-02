@@ -1,7 +1,5 @@
-const detailPorduct = {
-  mesage: (req, res) => {
-    res.send("ruta de productos OK");
-  },
+const detailPorduct = (req, res) => {
+  res.render("detailProducts.ejs");
 };
 
 module.exports = detailPorduct;

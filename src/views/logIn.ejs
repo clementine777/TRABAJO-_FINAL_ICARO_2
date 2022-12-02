@@ -1,33 +1,42 @@
-<%- include ('partials/heads', {headtittle: 'SIGN IN' }); %>
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/heads.ejs', {headtittle: 'LOGIN', cssForm1:'', cssForm2:'' }); %>
+<h1> <%=tittleform %> </h1>
 
+<body class="grid-container">
+  <%- include ('partials/header.ejs') %>
 
-<%=tittleform %>
-<main>
-  <form action="http://localhost:3001/login" method="POST">
-    <label for="name">Enter your name </label>
-    <input type="text" placeholder="Name" name="name"  max="50" id="name">
-    <br>
-    <label for="lastname">Enter your lastname</label>
-    <input type="text" placeholder="Lastname" name="lastname"  max="50" id="lastname">
-    <br>
-    <label for="email">Enter your E-mail </label>
-    <input type="email" placeholder="E-mail" name="email"  max="50" id="email">
-    <br>
-    <label for="repeat-email">Repeat your E-mail </label>
-    <input type="email" placeholder="Confirm E-mail" name="repeat_email"  max="50" id="repeat_email">
-    <br>
-    <label for="password">Enter the Password </label>
-    <input type="password" placeholder="Password" name="password" id="password">
-    <br>
-    <label for="repeatpassword">Repeat the Password </label>
-    <input type="password" placeholder="Password" name="repeat_password" id="repeatpass_word">
-    <br>
-    <label for="termsofuse"><a href="#">Acept ther terms of use an conditions of us! </a> </label>
-    <input type="checkbox" name="terms_of_use " id="terms_of_use" >
-    <br>
-    <button type="submit">Sign In</button>
+  <main class="main-container">
+    <form action="http://localhost:3001/login" method="POST">
+      <label for="firstname">Enter your name </label>
+      <input type="text" placeholder="Name" name="firstname" max="50" id="name" />
+      <br />
+      <label for="lastname">Enter your lastname</label>
+      <input type="text" placeholder="Lastname" name="lastname" max="50" id="lastname" />
+      <br />
+      <label for="email">Enter your E-mail </label>
+      <input type="email" placeholder="E-mail" name="email" max="50" id="email" />
+      <br />
+      <label for="repeat-email">Repeat your E-mail </label>
+      <input type="email" placeholder="Confirm E-mail" name="repeat_email" max="50" id="repeat_email" />
+      <br />
+      <label for="password">Enter the Password </label>
+      <input type="password" placeholder="Password" name="password" id="password" />
+      <br />
+      <label for="repeatpassword">Repeat the Password </label>
+      <input type="password" placeholder="Password" name="repeat_password" id="repeatpass_word" />
+      <br />
+      <label for="termsofuse"><a href="#">Acept ther terms of use an conditions of us! </a>
+      </label>
+      <input type="checkbox" name="terms_of_use " id="terms_of_use" />
+      <br />
+      <button type="submit">Sign In</button>
+    </form>
+  </main>
 
-  </form>
-</main>
+  <%- include ('partials/footer.ejs') %>
+
+</body>
+
 
 </html>

@@ -1,8 +1,8 @@
 const express = require("express");
+const homeView = require("../controllers/homeController");
 const router = express.Router();
-const homeController = require("../controllers/homeController");
 
-router.get("/home", homeController.homeView);
+router.get("/home", homeView);
 // router.post();
 // router.delete();
 // router.put();
