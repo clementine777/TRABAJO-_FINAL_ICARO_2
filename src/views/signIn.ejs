@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ('partials/heads', {headtittle:'Home', cssForm1:'', cssForm2:'/styles/login/login.css' }); -%>
+<%- include ('partials/heads', {headtittle:'Home', cssForm1:'', cssForm2:'/styles/login/signIn.css' }); -%>
 
-<body class="grid-container">
-  <%- include ('partials/header.ejs') %>
-  <div class="banner"></div>
-  <!--LOGIN-FORMS-->
-  <main class="main-container">
-    <div class="login">
-      <p>
-        Hi there!, do you want to receive news?&nbsp; Please enter your email
-        to log in or sign up
-      </p>
-      <div class="input-spaces">
-        <div id="mail">
-          <input type="email" placeholder="Email" required />
-        </div>
-        <div id="pass">
-          <input type="password" placeholder="Password" required />
-        </div>
-        <div class="send-buttom">
-          <a href="#"><button>Continue</button></a>
-        </div>
-      </div>
+  <body class="grid-container">
+    <%- include ('partials/header.ejs') %>
+      <div class="banner"></div>
+      <!--LOGIN-FORMS-->
+      <main class="main-container">
+        <div class="login">
+          <p>
+            Hi there!, do you want to receive news?&nbsp; Please enter your email
+            to log in or sign up
+          </p>
+          <div class="input-spaces">
+            <div id="mail">
+              <input type="email" placeholder="Email" required />
+            </div>
+            <div id="pass">
+              <input type="password" placeholder="Password" required />
+            </div>
+            <div class="send-buttom">
+              <a href="#"><button>Continue</button></a>
+            </div>
+          </div>
 
-      <div class="login-resources">
-        <a href="#">
-          <span class="face"><i class="fa-brands fa-square-facebook"></i>&nbsp; Continue
-            withFacebook?</span>
-        </a>
-        <a href="#">Sing up</a>
-        <a href="#">Fargot your Password? </a>
-      </div>
-    </div>
-  </main>
+          <div class="login-resources">
+            <a href="#">
+              <span class="face"><i class="fa-brands fa-square-facebook"></i>&nbsp; Continue
+                withFacebook?</span>
+            </a>
+            <a href="#">Sing up</a>
+            <a href="#">Fargot your Password? </a>
+          </div>
+        </div>
+      </main>
 
-  <%- include ('partials/footer.ejs') %>
-</body>
+      <%- include ('partials/footer.ejs') %>
+  </body>
 
 </html>

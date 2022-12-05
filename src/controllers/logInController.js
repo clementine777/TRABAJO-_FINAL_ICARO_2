@@ -1,11 +1,7 @@
+
 const logIn = {
   logInView: (req, res) => {
-    res.render("logIn.ejs", { tittleform: "Complete the form and join Us!" });
-  },
-
-  logInPost: (req, res, next) => {
-    console.log(req.body);
-    next();
+    res.render("logIn.ejs");
   },
 
   succesLogin: (req, res) => {
@@ -15,7 +11,6 @@ const logIn = {
       lastname,
       email,
     };
-    //console.log(userData);
     return res.render("successlogin.ejs", { userData: userData });
   },
 };

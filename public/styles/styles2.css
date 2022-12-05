@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
+
 }
 
 /* .grid-container > * {
@@ -34,6 +34,8 @@ body{
 .footer {
   grid-area: footer;
   align-self: end;
+
+
   /* position: sticky; */
   /* ESTO MANYIENE EL FOOTER PEGADO USANDO GRID LAYOUT */
 }

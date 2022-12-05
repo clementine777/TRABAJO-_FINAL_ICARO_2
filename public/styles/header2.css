@@ -1,4 +1,5 @@
 .presentation {
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
@@ -37,6 +38,7 @@
 .session a {
   /* position: relative;
   left: 0%; */
+  color: white;
   padding: 10px;
   font-size: 25px;
   text-decoration: none;
@@ -65,10 +67,11 @@
   font-size: 15px;
   border-radius: 25px;
   border: none;
-  outline: none;
+  outline: no;
 }
 
 .search button {
+  color: white;
   position: absolute;
   right: 0;
   top: -5px;
@@ -80,6 +83,10 @@
   font-size: 18px;
   border: none;
   background-color: #610094;
+}
+
+.search .seacrh-container {
+  color: black;
 }
 
 /* MOVILE*/
@@ -112,9 +119,17 @@
     font-size: 45px;
   }
 
+  .contenedor-header .cart-responsive a {
+    color: white;
+  }
+
   .contenedor-header .burguer-menu {
     padding: 30px;
     font-size: 45px;
+  }
+
+  .contenedor-header .burguer-menu a {
+    color: white;
   }
 }
 

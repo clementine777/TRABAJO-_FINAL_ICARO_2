@@ -1,16 +1,26 @@
-<%- include ('partials/heads', {headtittle: 'SUCCES LOGIN' , tittleCss:'main.css' }); %>
+<!DOCTYPE html>
+<html lang="en">
+  <%- include ('partials/heads', {headtittle: 'SUCCES LOGIN' ,
+  cssForm1:'styles/login/success-login.css' , cssForm2:'styles/styiles2.css' });
+  %>
 
-  <body>
-    <h1> review your information and send it </h1>
-    <ul>
-      <li>
-        Name <%= userData.firstname %>
-          <br>
-          Apellidoo <%= userData.lastname %>,
-            <br>
-            Email <%= userData.email %>
-      </li>
-    </ul>
+  <body class="grid-container">
+    <%- include ('partials/header.ejs') %>
+    <div class="banner"></div>
+
+    <main class="main-container">
+      <h1>Welcome to Star Jewerly Factory</h1>
+      <ul>
+        <li>
+          Name: <%= userData.firstname %>
+          <br />
+          Apellido: <%= userData.lastname %>
+          <br />
+          Email: <%= userData.email %>
+        </li>
+      </ul>
+    </main>
+
+    <%- include ('partials/footer.ejs') %>
   </body>
-
-  </html>
+</html>
