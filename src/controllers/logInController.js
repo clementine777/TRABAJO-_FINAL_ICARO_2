@@ -1,6 +1,6 @@
-
 const logIn = {
   logInView: (req, res) => {
+    const { firstname, lastname, email, password } = req.body;
     res.render("logIn.ejs");
   },
 
