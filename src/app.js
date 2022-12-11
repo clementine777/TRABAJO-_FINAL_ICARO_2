@@ -8,8 +8,7 @@ const morgan = require("morgan");
 const session = require("express-session");
 const sessionConfig = require("./config/sessionConfig");
 const cookie = require("cookie-parser");
-//const bcrypt = require("bcrypt");
-const sequelizeConfig = require("./config/dataBaseConfig"); //configuracion de la base de datos
+const database = require("./config/database");
 
 //usar body parser para tener la funcion body
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -35,6 +34,13 @@ app.use(require("./routes/detailProductRoute"));
 app.use(require("./routes/cartRoute"));
 app.use(require("./routes/signInRoute"));
 app.use(require("./routes/logInRoute"));
+
+app.use(function (err, req, res, next) {
+  // Manejar el error aquí
+  if (err == "Error login") {
+    res.status(500).json({ error: "Failed to get users" });
+  }
+});
 
 //escuchar puerto del servidor
 app.listen(port, () => {
