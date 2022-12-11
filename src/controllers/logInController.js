@@ -26,6 +26,8 @@ const createUser = async (req, res) => {
     return res.render("logIn.ejs");
   }
 };
+
+module.exports = { logInView, createUser };
 // .then((Users) => {
 //   return res.render("successlogin.ejs", { userData: Users });
 // })
@@ -33,5 +35,3 @@ const createUser = async (req, res) => {
 //   res.console.log("not added residters");
 //   res.render("login.ejs", err);
 // });
-
-module.exports = { logInView, createUser };

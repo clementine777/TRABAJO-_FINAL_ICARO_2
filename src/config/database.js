@@ -9,6 +9,7 @@ const sequelize = new Sequelize(
   {
     host: config.development.host,
     dialect: config.development.dialect,
+    logging: false, //habilitar para ver en consola las consultas sql
   }
 );
 
