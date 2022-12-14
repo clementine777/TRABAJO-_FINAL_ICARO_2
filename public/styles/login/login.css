@@ -36,8 +36,17 @@
   color: white;
   background-color: #610094;
   border-radius: 0.5rem;
+  border: none;
   align-self: center;
   cursor: pointer;
+}
+
+.main-container .login-form button:hover {
+  color: white;
+  text-shadow: 0 0 30px hsl(288, 93%, 83%);
+  background: #d148f3;
+  box-shadow: 0 10px 60px #d148f3;
+  transition: 0.4s;
 }
 
 .main-container .login-form .text-terms-use {
@@ -47,6 +56,14 @@
 #termsofuse {
   color: gray;
   font-size: 1.4rem;
+}
+
+#error-message,
+#error-message2,
+#error-message-email {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 12px;
 }
 
 /* agranda el checkbox*/

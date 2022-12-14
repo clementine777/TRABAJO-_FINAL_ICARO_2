@@ -1,7 +1,5 @@
-cartController = {
-  mesage: (req, res) => {
-    res.send("ruta carrito ok");
-  },
+const cart = (req, res) => {
+  res.render("cart.ejs");
 };
 
-module.exports = cartController;
+module.exports = cart;

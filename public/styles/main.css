@@ -2,7 +2,7 @@
   color: white;
   display: flex;
   justify-content: center;
-  height: 1600px;
+  height: 1280px;
   width: auto;
 }
 
@@ -34,6 +34,12 @@ article {
   min-width: auto;
   border-radius: 4%;
   text-align: center;
+}
+
+article:hover {
+  transform: translateY(-11px);
+  transition: 0.4s;
+  box-shadow: 0 10px 80px #610094;
 }
 
 h2 {
@@ -69,14 +75,23 @@ article img {
 }
 
 button {
+  font-size: 20px;
   color: white;
   height: auto;
   width: 150px;
   padding: 5px;
   margin-bottom: 15px;
-  border-radius: 10%;
+  border-radius: 1rem;
+  border: none;
   background-color: #610094;
   cursor: pointer;
+}
+button:hover {
+  color: white;
+  text-shadow: 0 0 30px hsl(288, 93%, 83%);
+  background: #d148f3;
+  box-shadow: 0 10px 60px #d148f3;
+  transition: 0.4s;
 }
 /*MODO MOVILE*/
 @media screen and (max-width: 800px) {

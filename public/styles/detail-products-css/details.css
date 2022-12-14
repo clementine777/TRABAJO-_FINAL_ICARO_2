@@ -80,13 +80,26 @@
   padding: 5px;
   margin-bottom: 15px;
   border-radius: 10px;
+  border: none;
   background-color: #610094;
   cursor: pointer;
   font-size: 20px;
 }
+.description a button:hover {
+  color: white;
+  text-shadow: 0 0 30px hsl(288, 93%, 83%);
+  background: #d148f3;
+  box-shadow: 0 10px 60px #d148f3;
+  transition: 0.4s;
+}
 
 .description .sizing a {
   color: white;
+}
+
+.description .sizing a:hover {
+  color: rgb(155, 155, 155);
+  transition: 0.3s;
 }
 
 /*PRECIO DE LA DESCRIPCION*/

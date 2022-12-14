@@ -1,10 +1,10 @@
 .main-container {
   color: white;
   display: flex;
-  /* min-height: 100vh; */
+  height: auto;
   /* height: 900px; */
-  min-height: 100vh;
-  width: auto;
+  /* min-height: 100vh; */
+  width: 100%;
   justify-content: center;
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
@@ -12,11 +12,13 @@
 
 main .login {
   display: flex;
+  gap: 25px;
   /* max-height: 50%; */
-  width: 40%;
-  max-width: 550px;
-  margin: 10px;
-  padding: 20px;
+  height: auto;
+  width: 700px;
+  /* max-width: 550px; */
+  margin: 7rem;
+  padding: 3rem;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -33,16 +35,17 @@ main .login {
 .main-container .login .input-spaces {
   margin: 8px;
   display: flex;
+  gap: 5px;
   flex-direction: column;
   justify-content: center;
   justify-content: space-between;
   align-items: center;
-  height: 150px;
+  height: 120px;
 }
 .login #mail input,
 #pass input {
-  height: 25px;
-  width: 200px;
+  height: 35px;
+  width: 300px;
   font-size: 15px;
   line-height: 22px;
   padding: 10px;
@@ -51,16 +54,24 @@ main .login {
   outline: none;
 }
 
-.main-container .login .input-spaces button {
+.main-container .login .send-buttom button {
   color: white;
   height: 40px;
-  width: 100px;
+  width: 120px;
   padding: 5px;
   margin-bottom: 15px;
   border-radius: 10px;
+  border: none;
   background-color: #610094;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
+}
+.main-container .login .send-buttom button:hover {
+  color: white;
+  text-shadow: 0 0 30px hsl(288, 93%, 83%);
+  background: #d148f3;
+  box-shadow: 0 10px 60px #d148f3;
+  transition: 0.4s;
 }
 
 .main-container .login .login-resources .face,
@@ -69,33 +80,43 @@ a {
 }
 
 @media screen and (max-width: 450px) {
+  .main-container {
+    display: flex;
+    /* min-width: 100%; */
+    /* height: 130vh; */
+    height: auto;
+    /* min-height: 100vh; */
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* overflow: scroll; */
+  }
+
   main .login {
     display: flex;
+    gap: 50px;
     flex-direction: column;
-    height: 0;
-    width: 80%;
+    height: auto;
+    width: 600px;
     /* max-width: 550px; */
     margin: 40px;
-    padding: 400px 80px 400px 80px;
+    padding: 7rem 1rem;
+    /* padding: 400px 80px 400px 80px; */
     justify-content: space-evenly;
     align-items: center;
     background-color: #150050;
     text-align: center;
     /* text-align: left; */
     border-radius: 15px;
+    position: relative;
   }
 
-  .main-container {
-    display: flex;
-    min-width: 100vh;
-    height: 130vh;
-    /* min-height: 100vh; */
-    width: auto;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    /* overflow: scroll; */
+  .main-container .login p {
+    font-size: 30px;
+    line-height: 45px;
+    align-self: flex-start;
   }
+
   .login #mail input,
   #pass input {
     height: 50px;
@@ -106,5 +127,13 @@ a {
   .login #mail,
   #pass {
     padding-bottom: 20px;
+  }
+
+  .main-container .login .input-spaces button {
+    align-self: baseline;
+    /* position: absolute;
+    bottom: 45px;
+    left: 2px;
+  } */
   }
 }

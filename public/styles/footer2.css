@@ -31,6 +31,10 @@
   color: white;
   font-size: 30px;
 }
+.social-media span i:hover {
+  color: rgb(155, 155, 155);
+  transition: 0.3s;
+}
 
 /*columna support*/
 .support {
@@ -46,6 +50,12 @@
   text-decoration: none;
   padding: 7px;
 }
+
+.support a:hover {
+  color: rgb(155, 155, 155);
+  transition: 0.3s;
+}
+
 /*columna about us*/
 .about-us {
   display: flex;
@@ -60,6 +70,10 @@
   color: white;
   text-decoration: none;
   padding: 7px;
+}
+.about-us a:hover {
+  color: rgb(155, 155, 155);
+  transition: 0.3s;
 }
 
 .end-foot {

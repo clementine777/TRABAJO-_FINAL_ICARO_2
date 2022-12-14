@@ -1,9 +1,10 @@
 const express = require("express");
-const homeView = require("../controllers/homeController");
+const home = require("../controllers/homeController.js");
 const router = express.Router();
 
-router.get("/home", homeView);
-router.get('/', homeView)
+router.get("/home", home.homeView);
+//router.get("/product/:id", home.productView);
+router.get("/", home.homeView);
 // router.post();
 // router.delete();
 // router.put();

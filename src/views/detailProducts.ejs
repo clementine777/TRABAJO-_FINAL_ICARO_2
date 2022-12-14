@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include ('partials/heads.ejs', {headtittle: 'LOGIN', cssForm1:'', cssForm2:'/styles/detail-products-css/details.css' }); %>
+<%- include ('partials/heads.ejs', {headtittle: 'DETAIL PRODUCTS' , cssForm1:'',
+  cssForm2:'/styles/detail-products-css/details.css' }); %>
 
 <body class="grid-container">
   <%- include ('partials/header.ejs') %>
@@ -16,22 +17,20 @@
           </div>
         </div>
       </div>
-
+      <!-- <% products.forEach(product =>{  %> -->
       <div class="description">
-        <h1> ANGEL WINGS RING </h1>
+        <h1> <%-product.product_name %> </h1>
         <hr>
-        <h2> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, sapiente a adipisci dolor
-          ipsa fuga! Explicabo ea fuga dolorum libero id hic esse, amet asperiores dolor vitae consequatur
-          fugiat cupiditate!
+        <h2> <%- produc.product_description %>
         </h2>
         <div class="price-detail">
           <span class="dollar">$</span>
-          <span class="number">29</span>
+          <span class="number"><%- product.price %></span>
           <span class="fractions">99</span>
         </div>
         <a href="#"><button>BUY</button></a>
         <a href="#"><button>ADD TO CART</button> </a>
-
+        <!-- <%  }) %> -->
         <span class="sizing"><i> Ring Size:<a href="#">Sizing Help?</a> </i> </span>
 
       </div>
@@ -49,6 +48,7 @@
 
 
   <%- include ('partials/footer.ejs') %>
+  <%- include ('partials/scripts.ejs') %>
 
 </body>
 
