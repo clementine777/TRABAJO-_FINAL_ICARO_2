@@ -4,6 +4,7 @@ const products = require("../models/products.js");
 const homeView = (req, res) => {
   products.findAll().then((products) => {
     products.forEach((product) => {
+      console.log(product.id_product);
       let productStr = product.price.toString();
       let point = productStr.indexOf(".");
       product.price = productStr.slice(0, point);

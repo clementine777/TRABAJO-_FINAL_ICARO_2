@@ -1,16 +1,18 @@
 const Sequelize = require("sequelize");
 const products = require("../models/products.js");
 
-const detailPorduct = (req, res) => {
-  res.render("detailProducts.ejs");
-};
-
 // const detailPorduct = (req, res) => {
-//   products.findByPk(req.params.id).then((products) => {
-//     req.product("home.ejs", { products });
-//     res.render("detailProducts.ejs");
-//   });
+//   res.render("detailProducts.ejs");
+// };
 
+const detailProduct = (req, res) => {
+  products.findByPk(req.params.id).then((product) => {
+    // res.send(product.id);
+    res.render("detailProducts.ejs", {
+      product,
+    });
+  });
+};
 //   res.render("detailProducts.ejs", { product });
 // };
 
@@ -26,4 +28,4 @@ const detailPorduct = (req, res) => {
 //   });
 // };
 
-module.exports = detailPorduct;
+module.exports = detailProduct;
