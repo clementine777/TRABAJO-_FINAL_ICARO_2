@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clementine777/TRABAJO-_FINAL_ICARO_2.git"
+    "url": ""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/clementine777/TRABAJO-_FINAL_ICARO_2/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/clementine777/TRABAJO-_FINAL_ICARO_2#readme",
+  "homepage": "",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",

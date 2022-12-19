@@ -1,9 +1,9 @@
 require("dotenv").config(); //llama dependencia dotenv
-const port = process.env.PORT || 3000; //llama a la variable de entorno del PORT
+const port = process.env.port || 3000; //llama a la variable de entorno del PORT
 const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
-const path = require("path"); //llama funcio pth
+const path = require("path"); //llama funcion path
 const morgan = require("morgan");
 const session = require("express-session");
 const sessionConfig = require("./config/sessionConfig");
@@ -34,6 +34,7 @@ app.use(require("./routes/detailProductRoute"));
 app.use(require("./routes/cartRoute"));
 app.use(require("./routes/signInRoute"));
 app.use(require("./routes/logInRoute"));
+app.use("/api", require("./routes/productsAPIRoute"));
 
 app.use(function (err, req, res, next) {
   // Manejar el error aquí
