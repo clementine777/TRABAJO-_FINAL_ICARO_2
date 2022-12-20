@@ -1,7 +1,7 @@
 // Creamos una variable para almacenar el carrito en localStorage
 let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart"));
 // Si el shoppingCart en localStorage no existe, entonces lo creamos como un array vacio
-if(!shoppingCart) {
+if (!shoppingCart) {
   shoppingCart = [];
 }
 
@@ -10,38 +10,38 @@ let productsContainer = document.querySelector(".cart-main");
 
 // CODIGO PARA MOSTRAR PRODUCTOS EN EL CARRITO
 // Hacemos un condicional para agregar el addEventListener si es que el elemento existe
-if(productsContainer) {
-  if(productsContainer) {
-    productsContainer.addEventListener('load', showProducts());
+if (productsContainer) {
+  if (productsContainer) {
+    productsContainer.addEventListener("load", showProducts());
   }
 }
 // Funcion para mostrar productos en el carrito
 async function showProducts() {
   // Llamo el array "shoppingCart" del localStorage y declaro un array vacio llamado "arrayProducts"
-  let shoppingCart = JSON.parse(localStorage.getItem('shoppingCart'));
+  let shoppingCart = JSON.parse(localStorage.getItem("shoppingCart"));
   let arrayProducts = [];
   // Con un for of itero atravez de los elementos de shoppingCart y hago un Fetch a la API para buscar
   // el producto en la base de datos y pusheo los datos necesarios para el carrito como un objeto a "arrayProducts"
-  for(let item of shoppingCart) {
-    await fetch(`http://localhost:3000/api/product/${item.id}`)
-      .then(response => response.json())
-      .then(data => {
+  for (let item of shoppingCart) {
+    await fetch(`http://localhost:3001/api/product/${item.id}`)
+      .then((response) => response.json())
+      .then((data) => {
         let { id, pics, product_name, price } = data;
         arrayProducts.push({
           id,
           pics,
           product_name,
           price,
-          quantity: item.quantity
+          quantity: item.quantity,
         });
       })
-    .catch(error => console.log(error));
-  };
+      .catch((error) => console.log(error));
+  }
   let subtotal = 0;
   let total = 0;
   // Apartir de aca lo que hago es renderizar los elementos de la vista del carrito con sus
   // respectivos datos, iterando atravez de "arrayProducts" y creando un product card por elemento
-  for(let product of arrayProducts) {
+  for (let product of arrayProducts) {
     subtotal += product.price;
     total += product.price;
     let productHTML = `<div class="product-cart">
@@ -62,7 +62,7 @@ async function showProducts() {
       <div class="xmark" productId=${product.id} onclick="removeFromCart(${product.id})"> X </div>
     </article>
     </div>`;
-  productsContainer.innerHTML += productHTML;
+    productsContainer.innerHTML += productHTML;
   }
 
   // Aqui renderizo el final del carrito, el subtotal, precio de shipping, etc
@@ -92,16 +92,16 @@ async function showProducts() {
 
 // Detectamos con un addEventListener en el documento que si se hace click en el documento y si dentro
 // de ese elemento existe el atributo "addToCartId", entonces llama a la funcion "addToCart" si es que existe
-let cartBotton = document.querySelectorAll('.cartBotton');
+let cartBotton = document.querySelectorAll(".cartBotton");
 
 // Si el boton existe, entonces iteramos entre todos los que haya y le agregamos un addEventListener
-// Asi cuando se hace click en el boton, se ejecuta la funcion addToCart con el productId como argumento 
-if(cartBotton) {
-  for(let botton of cartBotton) {
-    botton.addEventListener('click', function(e) {
-      let productId = e.target.getAttribute('productId');
-      if(productId) {
-       addToCart(productId);
+// Asi cuando se hace click en el boton, se ejecuta la funcion addToCart con el productId como argumento
+if (cartBotton) {
+  for (let botton of cartBotton) {
+    botton.addEventListener("click", function (e) {
+      let productId = e.target.getAttribute("productId");
+      if (productId) {
+        addToCart(productId);
       }
     });
   }
@@ -116,14 +116,14 @@ function addToCart(productId) {
   if (existingProductIndex >= 0) {
     // Si ya está en el carrito, solo aumentamos la cantidad
     shoppingCart[existingProductIndex].quantity += 1;
-    console.log('unidad agregada a producto existente!')
+    console.log("unidad agregada a producto existente!");
   } else {
     // Si no está en el carrito, lo añadimos como un nuevo producto
     shoppingCart.push({
       id: productId,
       quantity: 1,
     });
-    console.log('producto nuevo agregado!')
+    console.log("producto nuevo agregado!");
   }
   // Actualizamos el carrito en localStorage
   localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
@@ -148,9 +148,7 @@ function removeFromCart(productId) {
 // Función para añadir una unidad a un producto en el carrito
 function addUnitIn(productId) {
   // Obtenemos el index del producto en el carrito
-  const productIndex = shoppingCart.findIndex(
-    (p) => +p.id === productId
-  );
+  const productIndex = shoppingCart.findIndex((p) => +p.id === productId);
   // Aumentamos la cantidad
   shoppingCart[productIndex].quantity += 1;
   // Actualizamos el carrito en localStorage
@@ -162,14 +160,12 @@ function addUnitIn(productId) {
 // Función para quitar una unidad a un producto en el carrito
 function removeUnitIn(productId) {
   // Obtenemos el index del producto en el carrito
-  const productIndex = shoppingCart.findIndex(
-    (p) => +p.id === productId
-  );
+  const productIndex = shoppingCart.findIndex((p) => +p.id === productId);
   // Disminuimos la cantidad
   shoppingCart[productIndex].quantity -= 1;
   // Si la cantidad del producto despues de disminuir en 1 la cantidad es menor o igual a 0,
   // entonces se borra el producto del localStorage con un splice
-  if(shoppingCart[productIndex].quantity <= 0) {
+  if (shoppingCart[productIndex].quantity <= 0) {
     shoppingCart.splice(productIndex, 1);
   }
   // Actualizamos el carrito en localStorage
