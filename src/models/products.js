@@ -35,7 +35,7 @@ products.init(
       type: DataTypes.STRING,
     },
     pics: {
-      type: DataTypes.BLOB,
+      type: DataTypes.STRING,
     },
   },
   {

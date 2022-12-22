@@ -73,7 +73,7 @@
 }
 
 /*BOTONES DE LA DESCRIPCION*/
-.description a button {
+.description button {
   color: white;
   height: 60px;
   width: 300px;
@@ -85,7 +85,7 @@
   cursor: pointer;
   font-size: 20px;
 }
-.description a button:hover {
+.description button:hover {
   color: white;
   text-shadow: 0 0 30px hsl(288, 93%, 83%);
   background: #d148f3;

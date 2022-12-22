@@ -100,7 +100,7 @@
 
       <% products.forEach(product => { %>
       <article>
-        <a href="/detailProduct/<%- product.id %>"> <img src="assets/img/items2/img_20220408_145439_1-524a92bf0c9302a34f16555449094446-640-0.webp" alt="ring" /></a>
+        <a href="/detailProduct/<%- product.id %>"> <img src=<%- product.pic %> alt="ring" /></a>
         <h2><%- product.product_name %></h2>
         <div class="price">
           <span class="dollar">$</span>
@@ -110,10 +110,11 @@
         <button productId="<%- product.id %>" class="cartBotton">Add To Cart</button>
       </article>
       <% }) %>
-      
+
     </div>
   </main>
   <%- include ('partials/footer.ejs') %>
   <%- include ('partials/scripts.ejs') %>
 </body>
+
 </html>

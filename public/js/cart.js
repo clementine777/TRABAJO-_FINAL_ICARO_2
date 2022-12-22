@@ -23,7 +23,7 @@ async function showProducts() {
   // Con un for of itero atravez de los elementos de shoppingCart y hago un Fetch a la API para buscar
   // el producto en la base de datos y pusheo los datos necesarios para el carrito como un objeto a "arrayProducts"
   for (let item of shoppingCart) {
-    await fetch(`http://localhost:3001/api/product/${item.id}`)
+    await fetch(`http://localhost:3000/api/product/${item.id}`)
       .then((response) => response.json())
       .then((data) => {
         let { id, pics, product_name, price } = data;
